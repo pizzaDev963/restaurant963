@@ -8,7 +8,45 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <i class="fab fa-facebook"></i>
-    <script src="js/all.min.js"></script>
+    <header>
+      <div class="container">
+        <div class="berger-links" id="bergerIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul type="none">
+          <li><a href="">home</a></li>
+          <li><a href="">services</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+        <div class="bergermenu" id="menustate">
+          <ul type="none">
+            <li><a href="">home</a></li>
+            <li><a href="">services</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="">contact us</a></li>
+          </ul>
+        </div>
+        <h1>restaurant pizza</h1>
+      </div>
+    </header>
+    <script>
+      const burgerIcon = document.getElementById("bergerIcon");
+      const menu = document.getElementById("menustate");
+
+      // إضافة مستمع حدث النقر
+      burgerIcon.addEventListener("click", function () {
+        // تبديل class 'active' على أيقونة البرجر
+        // this.classList.toggle("active");
+
+        // تبديل class 'open' على القائمة
+        menu.classList.toggle("open");
+
+        // تبديل class 'menu-open' على الجسم لإزاحة المحتوى
+        // document.body.classList.toggle("menu-open");
+      });
+    </script>
   </body>
 </html>
