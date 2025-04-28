@@ -4,48 +4,81 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
+    <!-- fontawsom css -->
     <link rel="stylesheet" href="css/all.min.css" />
+    <!-- main style css -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- global-styl css -->
+    <link rel="stylesheet" href="./css/global-stayl.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- font poppin include -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- Start header -->
     <header>
       <div class="container">
-        <div class="berger-links" id="bergerIcon">
+        <div class="berger-links-out" id="bergerIcon">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <ul type="none">
+        <ul type="none" class="linksmenu">
+
           <li><a href="">home</a></li>
           <li><a href="">services</a></li>
           <li><a href="">about us</a></li>
           <li><a href="">contact us</a></li>
         </ul>
-        <div class="bergermenu" id="menustate">
-          <ul type="none">
-            <li><a href="">home</a></li>
-            <li><a href="">services</a></li>
-            <li><a href="">about us</a></li>
-            <li><a href="">contact us</a></li>
-          </ul>
-        </div>
-        <h1>restaurant pizza</h1>
+        <ul type="none" class="bergermenu" id="menustate">
+          <div class="berger-links-in" id="bergerIcon2">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <li><a href="">home</a></li>
+          <hr />
+          <li><a href="">services</a></li>
+          <hr />
+          <li><a href="">about us</a></li>
+          <hr />
+          <li><a href="">contact us</a></li>
+        </ul>
+        <img src="img/logo.png" alt="" width="46">
       </div>
     </header>
+    <!-- End header -->
+    <!-- Start main -->
+    <main>
+      <div class="container">
+        <div class="main-content">
+          <div class="text">
+            <h1>Hooray for fryday</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+              architecto at? Unde voluptas soluta maiores voluptatibus
+              doloremque quod,
+            </p>
+          </div>
+          <button>call</button>
+        </div>
+      </div>
+    </main>
+    <!-- End main -->
     <script>
-      const burgerIcon = document.getElementById("bergerIcon");
-      const menu = document.getElementById("menustate");
+      const btn = document.getElementById("bergerIcon");
+      const btn2 = document.getElementById("bergerIcon2");
+      const sidebar = document.getElementById("menustate");
 
       // إضافة مستمع حدث النقر
-      burgerIcon.addEventListener("click", function () {
-        // تبديل class 'active' على أيقونة البرجر
-        // this.classList.toggle("active");
-
-        // تبديل class 'open' على القائمة
-        menu.classList.toggle("open");
-
-        // تبديل class 'menu-open' على الجسم لإزاحة المحتوى
-        // document.body.classList.toggle("menu-open");
+      btn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+      btn2.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
       });
     </script>
   </body>

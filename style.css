@@ -1,68 +1,117 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+header {
+  background-color: #b22222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-header .container{
-    background-color: #B22222;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+header .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  height: 60px;
 }
-header .container ul{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-left:20px ;
-    text-transform: capitalize;
+header .container ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
 }
-header .container ul a{
-    text-decoration: none;
-    color: black;
+header .container ul a {
+  text-decoration: none;
+  color: white;
+  position: relative;
 }
-header .container h1{
-    text-transform: capitalize;
-    text-shadow: 0px 0px 10px yellow;
+.container ul a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease;
 }
-@media (max-width: 480px)
-{
-    header .container ul{
-        display: none;
-    }
+.container .bergermenu a::after {
+  background-color: black !important;
 }
-header .container .berger-links{
-    width: 50px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    position: fixed;
-    left: 5px;
-    top: 6px;
-    
+.container ul a:hover::after {
+  width: 100%;
 }
-header .container .berger-links span{
-    width: 30px;
-    height: 4px;
-    background-color: black;
+header .container h1 {
+  text-transform: capitalize;
+  text-shadow: 0px 0px 10px yellow;
 }
-@media (min-width: 480px){
-    header .container .berger-links{
-        display: none;
 
-    }
+header .container .berger-links-out {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  left: 5px;
+  top: 6px;
 }
-header .container .bergermenu ul{
-    /* position: fixed; */
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: -500px;
-    /* z-index: 1000px; */
+header .container .berger-links-out span {
+  width: 30px;
+  height: 4px;
+  background-color: white;
 }
-.open{
-    left: 0px;
+header .container .berger-links-in {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+ margin-bottom: 20px;
+ margin-left: -10px;
+}
+header .container .berger-links-in span {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+}
+@media (min-width: 720px) {
+  header .container .berger-links-out {
+    display: none;
+  }
+  header .container .bergermenu {
+    left: -400px !important;
+  }
+}
+@media (max-width: 720px) {
+  header .container .linksmenu {
+    display: none;
+  }
+}
+header .container .bergermenu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding-top: 20px;
+  width: 300px;
+  padding-left: 35px;
+  transition: 0.6s;
+}
+header .container .bergermenu a {
+  color: black;
+}
+/* ركز على importnat */
+.open {
+  left: -20px !important;
+}
+
+header img{
+    border-radius: 50%;
 }
