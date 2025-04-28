@@ -48,10 +48,16 @@ main p {
 main button{
   padding: 10px 20px;
   font-size: clamp(14px, 2vw, 18px);
-  border-radius: 30px;
+  border-radius: 20px;
   outline: none;
   border: none;
   background-color: rgb(177, 18, 18);
   color: white;
+  transition: 0.4s;
+}
+main button:hover{
+  transform: scale(1.1);
+  background-color: rgb(189, 33, 33);
+
 }
 
