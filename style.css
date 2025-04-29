@@ -1,5 +1,5 @@
 header {
-  background-color: #b22222;
+  background-color: var(--color-30);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -25,28 +25,24 @@ header .container .bergermenu {
 
 header .container ul a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   position: relative;
 }
 .container ul a::after {
   content: "";
   width: 0%;
-  height: 3px;
-  background-color: white;
+  height: 2px;
+  background-color: var(--text-color);
   position: absolute;
   bottom: -3px;
   left: 0;
   transition: width 0.3s ease;
 }
 .container .bergermenu a::after {
-  background-color: black !important;
+  background-color: var(--text-color) !important;
 }
 .container ul a:hover::after {
   width: 100%;
-}
-header .container h1 {
-  text-transform: capitalize;
-  text-shadow: 0px 0px 10px yellow;
 }
 
 header .container .berger-links-out {
@@ -63,7 +59,7 @@ header .container .berger-links-out {
 header .container .berger-links-out span {
   width: 30px;
   height: 4px;
-  background-color: white;
+  background-color: var(--text-color);
 }
 header .container .berger-links-in {
   width: 50px;
@@ -78,7 +74,7 @@ header .container .berger-links-in {
 header .container .berger-links-in span {
   width: 30px;
   height: 4px;
-  background-color: black;
+  background-color: var(--text-color);
 }
 @media (min-width: 720px) {
   header .container .berger-links-out {
@@ -94,7 +90,7 @@ header .container .berger-links-in span {
   }
 }
 header .container .bergermenu {
-  background-color: white;
+  background-color: var(--color-30);
   position: fixed;
   top: 0;
   left: -400px;
@@ -109,7 +105,7 @@ header .container .bergermenu {
   transition: 0.6s;
 }
 header .container .bergermenu a {
-  color: black;
+  color: var(--text-color);
 }
 /* ركز على importnat */
 .open {
