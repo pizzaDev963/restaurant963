@@ -127,7 +127,8 @@
       const price = document.getElementById("price");
     
       document.getElementById("prevBtn").onclick = () => {
-        current = (current - 1 + data.length) % data.length;
+        // هذه المعادلة تمكننا من الانقال يمني ويسار دون حدوث اخطاء
+        current = (current - 1 + data.length) % data.length; 
         updateCard();
       };
     
