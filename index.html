@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <!-- global-styl css -->
     <link rel="stylesheet" href="./css/global-stayl.css" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- header style -->
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- menu slider style -->
+    <link rel="stylesheet" href="css/menuSlide.css" />
     <!-- font poppin include -->
     <link
       href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
@@ -27,7 +30,6 @@
           <span></span>
         </div>
         <ul type="none" class="linksmenu">
-
           <li><a href="">home</a></li>
           <li><a href="">services</a></li>
           <li><a href="">about us</a></li>
@@ -47,7 +49,7 @@
           <hr />
           <li><a href="">contact us</a></li>
         </ul>
-        <img src="img/logo.png" alt="" width="46">
+        <img src="img/logo.png" alt="" width="46" />
       </div>
     </header>
     <!-- End header -->
@@ -68,6 +70,22 @@
       </div>
     </main>
     <!-- End main -->
+    <!-- Start list manu -->
+    <section class="menu-slider">
+      <button id="prevBtn">←</button>
+
+      <div class="card" id="card">
+        <h2 id="title">Burger Deluxe</h2>
+        <p id="desc">Delicious grilled burger with cheese and fries.</p>
+        <p id="price">$8.99</p>
+        <button class="order-btn">Order</button>
+      </div>
+
+      <button id="nextBtn">→</button>
+    </section>
+
+    <!-- End list manu -->
+    <!-- start toggler script header -->
     <script>
       const btn = document.getElementById("bergerIcon");
       const btn2 = document.getElementById("bergerIcon2");
@@ -81,5 +99,50 @@
         sidebar.classList.toggle("open");
       });
     </script>
+    <!-- end toggler script header -->
+     <!-- Start menus slider script -->
+     <script>
+      const data = [
+        {
+          title: "Burger Deluxe",
+          desc: "Delicious grilled burger with cheese and fries.",
+          price: "$8.99"
+        },
+        {
+          title: "Pizza Pepperoni",
+          desc: "Hot pizza with fresh pepperoni and cheese.",
+          price: "$12.50"
+        },
+        {
+          title: "Fried Chicken",
+          desc: "Crispy fried chicken served with coleslaw.",
+          price: "$10.00"
+        }
+      ];
+    
+      let current = 0;
+    
+      const title = document.getElementById("title");
+      const desc = document.getElementById("desc");
+      const price = document.getElementById("price");
+    
+      document.getElementById("prevBtn").onclick = () => {
+        current = (current - 1 + data.length) % data.length;
+        updateCard();
+      };
+    
+      document.getElementById("nextBtn").onclick = () => {
+        current = (current + 1) % data.length;
+        updateCard();
+      };
+    
+      function updateCard() {
+        title.textContent = data[current].title;
+        desc.textContent = data[current].desc;
+        price.textContent = data[current].price;
+      }
+    </script>
+    
+     <!-- End menus slider script -->
   </body>
 </html>

@@ -1,0 +1,27 @@
+.menu-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 300px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px #ccc;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .order-btn {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
