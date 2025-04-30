@@ -11,7 +11,7 @@ header .container {
   align-items: center;
   height: 60px;
 }
-header .container ul {
+header .container .linksmenu {
   display: flex;
   gap: 40px;
   align-items: center;
@@ -45,36 +45,27 @@ header .container ul a {
   width: 100%;
 }
 
-header .container .berger-links-out {
+header .container .berger-links {
   width: 50px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+header .container .berger-links span {
+  width: 30px;
+  height: 4px;
+  background-color: var(--text-color);
+}
+header .container .berger-links-out {
+  height: 100%;
   left: 5px;
   top: 6px;
 }
-header .container .berger-links-out span {
-  width: 30px;
-  height: 4px;
-  background-color: var(--text-color);
-}
 header .container .berger-links-in {
-  width: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
- margin-bottom: 20px;
- margin-left: -10px;
-}
-header .container .berger-links-in span {
-  width: 30px;
-  height: 4px;
-  background-color: var(--text-color);
+  margin-bottom: 20px;
+  margin-left: -10px;
 }
 @media (min-width: 720px) {
   header .container .berger-links-out {
@@ -112,6 +103,6 @@ header .container .bergermenu a {
   left: -20px !important;
 }
 
-header img{
-    border-radius: 50%;
+header img {
+  border-radius: 50%;
 }
