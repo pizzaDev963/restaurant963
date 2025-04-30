@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Burger Deluxe",
+    "desc": "Grilled beef burger with cheddar and fries.",
+    "price": "$8.99"
+  },
+  {
+    "title": "Pizza Pepperoni",
+    "desc": "Hot pizza with fresh pepperoni and mozzarella.",
+    "price": "$12.50"
+  },
+  {
+    "title": "Fried Chicken",
+    "desc": "Crispy fried chicken served with coleslaw.",
+    "price": "$10.00"
+  }
+]
