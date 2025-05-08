@@ -106,3 +106,7 @@ header .container .bergermenu a {
 header img {
   border-radius: 50%;
 }
+
+header .logo{
+  display: flex;
+}
